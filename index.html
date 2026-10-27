@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolívar, Cauca</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- encabezado -->
+    <header>
+        <img src="img/logo.png" alt="Logo" class="logo">
+        <h1>Bolívar, Cauca</h1>
+        <p>Capital del globo de papel</p>
+    </header>
+
+    <!-- menu -->
+    <nav>
+        <ul class="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#gastronomia">Gastronomía</a></li>
+            <li><a href="#turismo">Turismo</a></li>
+            <li><a href="https://bolivar-cauca.gov.co" target="_blank">Alcaldía</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- seccion inicio -->
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <p>Bolívar queda al sur del Cauca, a 1730 msnm, en el Macizo Colombiano.</p>
+        </section>
+
+        <!-- seccion gastronomia -->
+        <section id="gastronomia">
+            <h2>Gastronomía</h2>
+            <p>Comidas típicas de Bolívar: café, empanadas de pipián y sancocho.</p>
+            
+            <!-- tarjetas -->
+            <div class="contenedor-tarjetas">
+                <!-- tarjeta cafe -->
+                <div class="tarjeta">
+                    <img src="img/tarjeta1.jpg" alt="Café">
+                    <h3>Café del Macizo</h3>
+                    <p>Café de San Juan y El Rodeo.</p>
+                    <button class="btn" onclick="abrirReceta('cafe')">Ver más</button>
+                </div>
+                <!-- tarjeta pipian -->
+                <div class="tarjeta">
+                    <img src="img/tarjeta2.jpg" alt="Empanadas">
+                    <h3>Empanadas de Pipián</h3>
+                    <p>Con maní y ají.</p>
+                    <button class="btn btn-secundario" onclick="abrirReceta('pipian')">Ver receta</button>
+                </div>
+                <!-- tarjeta sancocho -->
+                <div class="tarjeta">
+                    <img src="img/tarjeta3.jpg" alt="Sancocho">
+                    <h3>Sancocho</h3>
+                    <p>Sancocho en leña y envueltos.</p>
+                    <button class="btn" onclick="abrirReceta('sancocho')">Ver receta</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- seccion turismo -->
+        <section id="turismo">
+            <h2>Turismo</h2>
+            <div class="contenedor-tarjetas">
+                <!-- tarjeta globos -->
+                <div class="tarjeta">
+                    <img src="img/globos.jpg" alt="Globos">
+                    <h3>Carnaval de Globos</h3>
+                    <p>En enero, desde 1908. Récord de 3680 globos.</p>
+                </div>
+                <!-- tarjeta carrozas -->
+                <div class="tarjeta">
+                    <img src="img/carrozas.jpg" alt="Carrozas">
+                    <h3>Carrozas y Taitapuros</h3>
+                    <p>Carrozas alegóricas y muñecos de 4 metros.</p>
+                </div>
+                <!-- tarjeta virgen -->
+               <div class="tarjeta">
+                    <img src="img/virgen.jpg" alt="Fiesta de la Virgen">
+                    <h3>Fiesta del Cerro - Virgen de las Misericordias</h3>
+                    <p>Patrona de Bolívar. Fiestas patronales el último domingo de agosto en el Cerro de Bolívar. Suben cientos de personas al monumento.</p>
+                </div>
+            
+        </section>
+
+        <!-- datos -->
+        <aside>
+            <h2>Datos</h2>
+            <ul>
+                <li>Globo más grande: 2736 pliegos</li>
+                <li>Carrozas alegóricas</li>
+                <li>Fiesta de la Virgen</li>
+                <li>A 3 horas de Popayán</li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- pie de pagina -->
+    <footer>
+        <p>Valentina Hoyos - Ficha: 3492641 - 2026</p>
+        <ul>
+            <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">WhatsApp</a></li>
+        </ul>
+    </footer>
+
+    <!-- ventanas recetas -->
+    <!-- ventana cafe -->
+    <div id="modal-cafe" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarReceta('cafe')">&times;</span>
+            <h3>Café del Macizo</h3>
+            <p>Veredas San Juan y El Rodeo, a 1730 msnm. Clima frío, tierra volcánica, sabor a panela y chocolate. Cultivo familiar, secado al sol 15 días.</p>
+        </div>
+    </div>
+    <!-- ventana pipian -->
+    <div id="modal-pipian" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarReceta('pipian')">&times;</span>
+            <h3>Receta Empanadas de Pipián</h3>
+            <p>Ingredientes: papa amarilla, maní, huevo, masa maíz, hogao, ají.</p>
+            <p>1. Cocinar papa y hacer puré<br>2. Mezclar con maní y huevo<br>3. Hacer guiso<br>4. Armar y freír</p>
+        </div>
+    </div>
+    <!-- ventana sancocho -->
+    <div id="modal-sancocho" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarReceta('sancocho')">&times;</span>
+            <h3>Receta Sancocho</h3>
+            <p>Ingredientes: gallina criolla, yuca, plátano, papa, envueltos.</p>
+            <p>1. Cocinar gallina en leña 2 horas<br>2. Agregar yuca y plátano<br>3. Hacer envueltos<br>4. Servir con ají</p>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script>
+        function abrirReceta(nombre) {
+            document.getElementById('modal-' + nombre).style.display = 'block';
+        }
+        function cerrarReceta(nombre) {
+            document.getElementById('modal-' + nombre).style.display = 'none';
+        }
+        window.onclick = function(e) {
+            if (e.target.classList.contains('modal')) {
+                e.target.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
